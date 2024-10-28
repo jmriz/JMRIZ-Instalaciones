@@ -1,0 +1,94 @@
+
+div#message
+        {
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+            width:40%;
+            border: solid 2px green
+        }
+
+        table 
+        {
+            border-collapse: collapse;
+            width: 1000px;
+        }
+
+        tr.heading 
+        {
+            font-weight: bolder;
+        }
+
+        td 
+        {
+            border: 1px solid black;
+            padding: 0 0.5em;
+        }
+
+        form 
+        {
+            width: 200px;
+        }
+
+
+ table.h { 
+    width: 900px;
+    }
+
+ .box01{
+      
+      left: 100px;
+      
+      height: 1200px;
+      
+      border: 5px solid green;
+      background: white;
+      color: black;
+      
+    }
+
+
+.box02{
+
+    border: 5px solid green;
+    width: 520px;
+    position:absolute;
+    top: 380px;
+    left: 380px;
+  
+}
+
+.box03{
+    position:absolute;
+    top: 980px;
+    left: 130px;
+}
+
+ .box11{
+      
+      left: 100px;
+      width: 1200px;
+      height: 1500px;
+      
+      border: 5px solid green;
+      background: white;
+      color: black;
+      
+    }
+
+
+.box12{
+
+    border: 5px solid green;
+    width: 610px;
+    position:absolute;
+    top: 720px;
+    left: 50px;
+  
+}
+
+.box13{
+    position:absolute;
+    top: 720px;
+    left: 680px;
+}

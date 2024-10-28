@@ -1,0 +1,206 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(menu.css);
+@import url(banner.css);
+@import url(estilo01.css);
+@import url(block.css);
+@import url(info.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+	background-color: #EBF5FB;
+    text-decoration: none;
+}
+
+#titulo {
+     position: absolute;
+     left: 100px; top: 20px;
+     display: inline-block; 
+     font-size: 2em;     
+}
+
+/* Navegación */
+
+nav {
+    margin-top: 100px; 
+    margin-left: 380px; 
+}
+
+nav ul {
+
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;  
+    background-color: darkred;
+    border-radius: 10px 10px 10px 10px;
+}
+
+nav a {
+    font-size: 1.5em;
+    color: greenyellow;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-align: center;      
+    background-color: greenyellow; 
+    color: darkred; 
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+
+}
+
+table.h { 
+    width: 900px;
+}
+
+table {
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+} 
+                           	
+th,td {
+	border: solid 1px black;
+	padding: 5px;
+}
+
+thead {
+	background-color: #006400;
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #8FBC8F;
+}
+
+tr:hover td {
+	background-color: #ffe599;
+	color: #f44336;
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+
+.container01 c1 {
+	list-style-image: url(imagenes_video/ico.png);
+}
+
+a { 
+	text-decoration: none; 
+}
+
+h1 {
+    float: left;
+    color: rgb(50, 205, 50);
+}
+
+header .contenedor {
+    display: table;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+section .contenedor {
+    display: table;
+} 
+
+#banner, #banner01  { 
+    margin-top: 150px; 
+    margin-left: 150px; 
+    max-width: 85%;
+    max-height: 75%;   
+    margin-right: 5px;
+}
+
+#container {
+	margin: auto;
+	width: 600px;
+}
+
+#container01, #container02 {
+	text-align: center;
+	color: rgb(14, 164, 223);
+}
+
+#container01 h3 {
+    margin-left: 15px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#bienvenidos, #bienvenidos03, #bienvenidos04 {
+    text-align: center;
+}
+
+#bienvenidos01 a:hover {
+    text-align: center;      
+    background-color: greenyellow; 
+    color: darkred; 
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+fieldset { 
+    border:5px solid greenyellow;
+    width: 600px; 
+    margin: 20px auto 0 auto;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.copy {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+.sociales a {
+    color: #333;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .sociales {
+        width: auto;
+    }
+    footer .contenedor {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 480px) {
+    .info-trabajos {
+        width: 40%;
+    }
+}
+
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+}

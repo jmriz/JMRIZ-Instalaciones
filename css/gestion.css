@@ -1,0 +1,129 @@
+
+div#message
+        {
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+            width:40%;
+            border: solid 2px green
+        }
+
+        table 
+        {
+            border-collapse: collapse;
+            width: 1000px;
+
+        }
+
+        tr.heading 
+        {
+            font-weight: bolder;
+        }
+
+        td 
+        {
+            border: 1px solid black;
+            padding: 0 0.5em;
+        }
+
+        form 
+        {
+            width: 200px;
+        }
+
+
+ table.h { 
+    width: 900px;
+    }
+
+ /* comentario css */
+
+ .caja { 
+
+            background:          
+            url(../imagenes_video/herramientas01.png) center center no-repeat scroll;       
+}   
+ 
+ .box01{
+      
+      left: 100px;
+      height: 1500px;
+      
+      border: 5px solid green;
+      background: white;
+      color: black;
+      
+    }
+
+
+.box02{
+
+    border: 5px solid green;
+    width: 520px;
+    position:absolute;
+    top: 350px;
+    left: 380px;
+  
+}
+
+.box03{
+    position:absolute;
+    top: 1100px;
+    left: 130px;
+}
+
+.box10{
+      
+      left: 100px;
+      width: 1200px;
+      height: 1100px;
+      
+      border: 5px solid green;
+      background: white;
+      color: black;
+      
+    }
+
+ .box11{
+
+      width: 1250px;
+      height: auto;
+      top: 700px;
+      left: 100px;
+      border: 5px solid green;
+      background: white;
+      color: black;
+      
+    }
+
+
+.box12{
+
+    width: 600px;
+    position:absolute;
+    top: 720px;
+    left: 40px;
+  
+}
+
+.box13{
+    position:absolute;
+    top: 740px;
+    left: 740px;
+}
+
+.box14{
+
+    border: 5px solid green;
+    width:  610px;
+    position:absolute;
+    top: 720px;
+    left: 40px;
+}
+
+.box15{
+
+    position:absolute;
+    top: 720px;
+    left: 750px;
+}

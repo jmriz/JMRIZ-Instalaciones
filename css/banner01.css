@@ -1,0 +1,33 @@
+#banner01 {
+    margin-left: 15px;
+    margin-top: 50px;
+    position: relative;
+}
+
+#banner01 img {
+    margin-left: 90px;
+    width: 80%;
+    height: 80%;
+}
+  
+#bienvenidos01  {
+    text-align: left;
+}
+
+@media (min-width:768px) {
+    #banner01 {
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner01 img {
+        height: auto;
+        margin-top: -100px;
+    }
+}
+
+@media (min-width:1024px) {
+    #banner01 img {
+        margin-top: -200px;
+    }
+}
+

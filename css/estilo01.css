@@ -1,0 +1,75 @@
+
+#banner01 {
+    margin-left: 15px;
+    margin-top: 50px;
+    position: relative;
+}
+
+#banner01 img {
+    margin-left: 90px;
+    width: 80%;
+    height: 80%;
+}
+#bienvenidos03 img {
+    width: 10%;
+    height: 10%;
+} 
+
+#bienvenidos03 a, #bienvenidos01 h2, #bienvenidos02 h2 {
+    text-align: center;
+} 
+
+#bienvenidos01 p {
+    margin-left: 15px;
+    text-align: left;
+}
+
+#bienvenidos01 p {
+    margin-left: 15px;
+    text-align: center;
+    color: rgb(14, 164, 223);
+}
+
+#bienvenidos02 p {
+    margin-left: 15px;
+    text-align: center;
+    color: rgb(25, 111, 61);
+}
+
+#bienvenidos04 p {
+     color: rgb(50, 205, 50);
+}
+
+#bienvenidos01 a:hover {
+    text-align: center;      
+    background-color: greenyellow; 
+    color: darkred;
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+#correo {
+    width: 30%;
+    height: 30%;
+    margin-left: 550px;
+    text-align: center;
+   
+}
+
+@media (min-width:768px) {
+    #banner01 {
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner01 img {
+        height: auto;
+        margin-top: -100px;
+    }
+}
+
+@media (min-width:1024px) {
+    #banner01 img {
+        margin-top: -200px;
+    }
+}
+

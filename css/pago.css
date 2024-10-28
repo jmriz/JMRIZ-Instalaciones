@@ -1,0 +1,21 @@
+  
+body {
+        
+        background:                    
+         url(../imagenes_video/tarjetas01.jpg) center top no-repeat fixed;             
+} 
+
+a {
+        text-decoration: none;
+}
+
+.micaja {
+        position: relative;
+        display: inline-block;
+}  
+
+.texto {
+        position: absolute;
+        top: 330px;
+        left: 430px;
+}      
