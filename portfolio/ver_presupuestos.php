@@ -142,7 +142,8 @@
 													<th>Correo</th>
 													<th>C.P</th>
 													<th>Teléfono</th>
-													<th>Fecha</th>		
+													<th>Fecha</th>	
+													<th>Trabajo a presupuestar</th>
 												</tr>
 											</thead>
 
@@ -162,7 +163,7 @@
 													<td class='h'><?=$presupuesto['Cp']?></td>
 													<td class="h"><?=$presupuesto['Telefono']?></td>
 													<td class="h" style="color: blue;"><?=$presupuesto['Fecha']?></td>
-
+													<td class="h"><?=$presupuesto['Tarea']?></td>
 										<?php
 													
 											endforeach 		
