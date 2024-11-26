@@ -74,7 +74,7 @@
 					<div id="form"  style='font-size:12px'> 
 					
 						<fieldset style="width: 420px";>
-							<center><br><p></p><a style='font-size:25px;border-radius: 20px; background-color: grey;color: orange" color: black;'href="portfolio/sesion.php"> &emsp;Iniciar Sesion&emsp;</a><br><p></p><a style='color: blue;'href="portfolio/signup.php">&emsp;Si no tienes cuenta, ¡crea una!&emsp;</a><br><p></p></center>
+							<center><br><p></p><a style='font-size:25px;border-radius: 20px; background-color: grey;color: orange" color: black;'href="portfolio/captcha_caracteres.php"> &emsp;Iniciar Sesion&emsp;</a><br><p></p><a style='color: blue;'href="portfolio/captcha_fontaneria.php">&emsp;Si no tienes cuenta, ¡crea una!&emsp;</a><br><p></p></center>
 						</fieldset>
 					</div>
 				</form>
