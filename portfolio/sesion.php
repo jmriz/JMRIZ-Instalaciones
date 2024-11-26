@@ -128,7 +128,7 @@
 		
 							<input type="submit" style='background-color: green;color:white' value="&emsp;Entrar&emsp;" /><br>
 			
-							<a style='color: blue;'href="signup.php"> Si no tienes cuenta, ¡crea una! </a>
+							<a style='color: blue;'href="captcha_fontaneria.php"> Si no tienes cuenta, ¡crea una! </a>
 
 							</center>
 						</fieldset>
