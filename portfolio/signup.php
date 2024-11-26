@@ -145,8 +145,9 @@
                 			$contra  = $_REQUEST["contra"];   
                 			$recontra = $_REQUEST["recontra"];
                 			$correo = strtolower($_REQUEST["correo"]);     
-                			$rol = "consultor"; 
-
+                			$rol = "consultor";
+					$fecha = date("Y-m-d");  
+					
         				// FIN RECOGIDA DE VARIABLES DEL FORMULARIO 
 
                 		// INICIO VALIDAR FORMULARIO
@@ -241,9 +242,8 @@
                 							// INSERTAR DATOS EN LA BD 
 
                 					 		// creamos la instruccion de insertar
-
-											 $sql_3 = "INSERT INTO `tusuarios` (`pkId_usuario`, `Usuario`, `Password`, `Rol`, `Correo`) VALUES ('$id_usuario', '$usuario' , '$contraseña', '$rol', '$correo')";
-
+	
+											$sql_3 = "INSERT INTO `tusuarios` (`pkId_usuario`, `Usuario`, `Password`, `Rol`, `Correo`, `Fecha_registro`) VALUES ('$id_usuario', '$usuario' , '$contraseña', '$rol', '$correo', '$fecha')";
                 							if ($conexion->query($sql_3) === true) {
                 					
                                                    		echo '<br>Nuevo usuario añadido'; // con numero ' . $conexion->idusuario;
