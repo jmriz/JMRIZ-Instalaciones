@@ -1,15 +1,15 @@
 <?php 
 
-   
+    //session_start();
     
     if(isset($_GET["usuar"]))  { // ESTA DEFINIDA Viene de sesion.php
-                                    
+                                    //echo "esta DEFINIDA";
                                     $_SESSION['usuario'] = $_GET["usuar"]; 
                                     $usuario = $_SESSION['usuario'];  
 
         } else { // NO ESTA DEFINIDA
-               
-                $_SESSION['usuario'] = "Sin Registar";
+                // echo "NO esta DEFINIDA";
+                $_SESSION['usuario'] = "Sin Registar"; // Modificado 24/10/2024
                 $usuario = $_SESSION['usuario'];  
             }     
 
@@ -34,7 +34,11 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<link rel="stylesheet" href="../css/fontello.css">
 		<link rel="stylesheet" href="../css/estilo.css">
-		
+
+		 <style type="text/css">
+
+		 	
+		 </style>
     </head>
 
     <body>
@@ -54,7 +58,8 @@
 				<h1>J.M.R.IZ. <br> &ensp;Instalaciones&ensp;</h1>
 
 				<p>&ensp;&ensp;&ensp;
-    			
+    			<!-- <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        		<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!"></a> -->
 				</p>
 			</div>
 
@@ -87,6 +92,7 @@
 
 				<div id="contenedor">
 
+	
 				 
 			   		<form action='presupuesto.php' method='GET'>
 
@@ -98,17 +104,24 @@
 
 							<?php echo"<input type='hidden' name='usuario' id='usuario' value='$usuario'>"; ?>  
 
-							&emsp;&ensp;<b>- NOMBRE:</b>
+							&emsp;&ensp;<b>- NOMBRE:</b><!-- pattern="^[a-zA-Z][azA-Z0-9-_\.]{3,15}$" -->
 							<input type="text" name="nombre" id="nombre" placeholder="CAMPO OBLIGATORIO" pattern="^[A-Za-z]{4,16}$" autofocus required /><br/><br/>
+
+
 							
-						 	&emsp;&ensp;<b>- CODIGO POSTAL:</b>
+						 	&emsp;&ensp;<b>- CODIGO POSTAL:</b><!-- pattern="/^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/"  pattern="/\d{5}/" 5 dígitos exactamente -->
 						 	<input type="text" name="codigo" id="codigo" placeholder="33000" pattern="^[0-9]{5}$" required size="6" /><br/><br/>
 
-                        	&emsp;&ensp;<b>- CORREO ELECTRONICO:</b>
+                        	&emsp;&ensp;<b>- CORREO ELECTRONICO:</b><!-- pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" -->
 							<input type="email" name="email" id="email" placeholder="CAMPO OBLIGATORIO" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required /><br/><br/>
 
-							&emsp;&ensp;<b>- TELEFONO:</b>
+							&emsp;&ensp;<b>- TELEFONO:</b><!-- pattern="\([0-9]{3} [0-9]{6})" -->
                             <input type="tel" name="telefono" id="telefono" placeholder="666112233" pattern="^[0-9]{9}$" size="10" /><br/><br/>
+
+                             &emsp;&ensp;<b>- DESCRIPCION:</b>
+                            <textarea name="tarea" rows="7" cols="35" placeholder="Describe los trabajos a realizar" maxlength="315" required ></textarea>
+
+							<br/>
 
                         	<br/>&ensp;&ensp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;<input style="color: black; background-color: turquoise;border-radius: 10px 10px 10px 10px" type="submit" value="&ensp;Siguiente&ensp;">
                         	<br/><br />
@@ -123,6 +136,7 @@
 							document.getElementById("codigo").value = valor2;
 							document.getElementById("telefono").value = valor3;
 							document.getElementById("usuario").value = valor4;
+							document.getElementById("tarea").value = valor5;
 					</script>
 
 				</div>
@@ -171,9 +185,10 @@
            <div class="contenedor">
 				<p class="copy"><b>J.M.R.IZ - Instalaciones &copy; 2024</b></p>
 				<div class="sociales">
-					<a class="icon-facebook" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"></a>
+					<a class="icon-facebook" href="https://www.facebook.com/jose.rodiz" target="_blank" rel="noopener noreferrer"></a>
+					<!-- <a class="icon-instagram" href="#"></a> -->
 					<?php echo"<a class='icon-phone' href='index03.php?usuar=$usuario' rel='noopener noreferrer'></a>";?>
-					<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=34666000000" target="_blank" rel="noopener noreferrer"></a>
+					<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=34669434023" target="_blank" rel="noopener noreferrer"></a>
 				</div>
 			</div>
         </footer> 
