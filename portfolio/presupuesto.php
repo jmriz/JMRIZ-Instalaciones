@@ -14,7 +14,7 @@
     $codigo = $_GET["codigo"];
     $correo = strtolower($_GET["email"]);
     $telefono = $_GET["telefono"];
-
+    $tarea = $_GET["tarea"];
   
     date_default_timezone_set("Europe/Madrid");
     $fecha = date("Y-m-d"); 
@@ -63,7 +63,7 @@
 
 
 
-					$sql_3 = "INSERT INTO `tpresupuestos` (`pkId_presupuesto`,`Nombre`, `Correo`, `Cp` , `Telefono` , `Fecha`) VALUES ('$id_presupuesto', '$nombre', '$correo', '$codigo', '$telefono', '$fecha')";
+					$sql_3 = "INSERT INTO `tpresupuestos` (`pkId_presupuesto`,`Nombre`, `Correo`, `Cp` , `Telefono` , `Fecha` , `Tarea`) VALUES ('$id_presupuesto', '$nombre', '$correo', '$codigo', '$telefono', '$fecha', '$tarea' )";
 
                 	if ($mysqli->query($sql_3) === true) {
                                                      		//echo '<br>Nuevo presupuesto añadido';
