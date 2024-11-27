@@ -14,7 +14,8 @@
     $codigo = $_GET["codigo"];
     $correo = strtolower($_GET["email"]);
     $telefono = $_GET["telefono"];
-    $tarea = $_GET["tarea"];
+	$tarea = $_GET["tarea"];
+
   
     date_default_timezone_set("Europe/Madrid");
     $fecha = date("Y-m-d"); 
@@ -53,17 +54,16 @@
                                     $id_presupuesto = $presupuesto['pkId_presupuesto'];
                                 } // endforeach 
 
-                                if ( $k == 0 ) {
-                                     $id_presupuesto = 1;
+                                //if ( $k == 0 ) {
+                                     $id_presupuesto = $k+1;
                             
-                                }else{
+                                //}else{
         
-                                        $id_presupuesto++;
-                                }
+                                        //$id_presupuesto++;
+                                //}
+								
 
-
-
-					$sql_3 = "INSERT INTO `tpresupuestos` (`pkId_presupuesto`,`Nombre`, `Correo`, `Cp` , `Telefono` , `Fecha` , `Tarea`) VALUES ('$id_presupuesto', '$nombre', '$correo', '$codigo', '$telefono', '$fecha', '$tarea' )";
+					$sql_3 = "INSERT INTO `tpresupuestos` (`pkId_presupuesto`,`Nombre`, `Correo`, `Cp` , `Telefono` , `Fecha`, `Tarea`) VALUES ('$id_presupuesto', '$nombre', '$correo', '$codigo', '$telefono', '$fecha', '$tarea')";
 
                 	if ($mysqli->query($sql_3) === true) {
                                                      		//echo '<br>Nuevo presupuesto añadido';
@@ -173,7 +173,7 @@
 								<option value="desatascos">Desatascos</option>
 							</select><br/><br/>
 
-							<span style='color:red;'><strong><p>&ensp;&emsp;&emsp;&ensp;&ensp;Debes escojer al menos una de las siguientes opciones</p></strong></span>
+							<span style='color:blue;'><strong><p>&ensp;&emsp;&emsp;&ensp;&ensp;Debes escojer al menos una de las siguientes opciones</p></strong></span>
 
 							&emsp;&ensp;<b>- <u>Fontanería</u></b><br/><br/>
 						    &ensp;&ensp;&emsp;&emsp;&ensp;&ensp;<b>Instalación:</b>
@@ -184,7 +184,8 @@
 								<option value="cocina">Cocina</option>
 							</select><br/><br/> 
 
-							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;Puntos de Agua:
+							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;
+                            <span style='color: blue;'>Puntos de Agua: </span>
 							<input type="number" min="0" max="20" name="puntosag" id="puntosag" size="2" value="0" >
 							</select><br/><br/>  
 
@@ -196,7 +197,8 @@
 								<option value="accesorios"/>Accesorios</option>
 							</select></br></br>
 
-							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;Unidades:
+							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;
+        					<span style='color: blue;'>Unidades:</span>
 							<input type="number" min="0" max="20" name="unidadesre" id="unidadesre" size="2" value="0">
 							</select><br/><br/>  
 
@@ -208,7 +210,8 @@
 								<option value="radiador"/>Radiador</option>
 							</select><br/><br/>
 
-							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;Radiadores:
+							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;
+							<span style='color: blue;'>Radiadores:</span>
 							<input type="number" min="0" max="20" name="radiadores" id="radiadores" size="2" value="0">
 							</select><br/><br/>  
 
@@ -220,11 +223,12 @@
 								<option value="calregulacion"/>Regulación</option>
 							</select><br/><br/>
 
-							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;Unidades:
+							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;
+							<span style='color: blue;'>Unidades:</span>
 							<input type="number" min="0" max="20" name="unidadesra" id="unidadesra" size="2" value="0">
 							</select><br/><br/>  
 
-							&emsp;&ensp;<b>- <u>Gas</u> Instalación:</b>
+							&emsp;&ensp;<b>- <u>Gas</u><span style='color: blue;'>&ensp;Instalación:</span></b>
 							<select name="tipogas" id="tipogas">
 								<option value="blanco"></option>
 								<option value="gasvivicomp"/>Gas</option>
@@ -251,7 +255,8 @@
 								<option value="desani"/>Sanitarios</option>
 							</select><br/><br>
 
-							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;Unidades:
+							&ensp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&ensp;
+							<span style='color: blue;'>Unidades:</span>
 							<input type="number" min="0" max="20" name="unidadesde" id="unidadesde" size="2" value="0">
 							</select><br/><br/>  
 
@@ -306,9 +311,9 @@
            <div class="contenedor">
 				<p class="copy"><b>J.M.R.IZ - Instalaciones &copy; 2024</b></p>
 				<div class="sociales">
-					<a class="icon-facebook" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"></a>
+					<a class="icon-facebook" href="https://www.facebook.com/jose.rodiz" target="_blank" rel="noopener noreferrer"></a>
 					<?php echo"<a class='icon-phone' href='index03.php?usuar=$usuario' rel='noopener noreferrer'></a>";?>
-					<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=34666000000" target="_blank" rel="noopener noreferrer"></a>
+					<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=34669434023" target="_blank" rel="noopener noreferrer"></a>
 				</div>
 			</div>
         </footer> 
